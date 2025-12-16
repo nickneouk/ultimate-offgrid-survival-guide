@@ -59,6 +59,22 @@
         }
     </style>
 </head>
+
+    <!-- PWA Configuration -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#5D5CDE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Survival Guide">
+<link rel="apple-touch-icon" href="https://via.placeholder.com/192x192/5D5CDE/FFFFFF?text=🏔️">
+
+<!-- SEO Optimization -->
+<meta name="description" content="Complete off-grid survival encyclopedia with 60+ scenarios, calculators, and emergency protocols. Works completely offline.">
+<meta name="keywords" content="survival guide, off-grid living, emergency preparedness, bushcraft, homesteading">
+<meta property="og:title" content="Ultimate Off-Grid Survival Guide">
+<meta property="og:description" content="Complete survival encyclopedia with 60+ scenarios and emergency protocols">
+<meta property="og:image" content="https://via.placeholder.com/1200x630/5D5CDE/FFFFFF?text=Ultimate+Off-Grid+Survival+Guide">
+<meta property="og:url" content="https://yourusername.github.io/ultimate-offgrid-survival-guide">
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Header -->
     <header class="bg-earth-700 dark:bg-gray-800 text-white shadow-lg">
@@ -3501,6 +3517,68 @@
         // Initialize the app when the page loads
         init();
     </script>
+<!-- PWA Install Functionality -->
+<script>
+// Enhanced Service Worker registration with better error handling
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((registration) => {
+        console.log('✅ Service Worker registered:', registration.scope);
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New version available
+              console.log('🔄 New version available');
+            }
+          });
+        });
+      })
+      .catch((error) => {
+        console.log('ℹ️ Service Worker registration failed (normal in some environments):', error);
+      });
+  });
+}
 
+// PWA Install prompt
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  console.log('📱 PWA install prompt available');
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Show custom install button
+  showInstallButton();
+});
+
+function showInstallButton() {
+  const installBtn = document.createElement('button');
+  installBtn.innerHTML = '📱 Install App';
+  installBtn.className = 'fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-green-700 transition-colors z-50';
+  installBtn.onclick = installPWA;
+  document.body.appendChild(installBtn);
+}
+
+async function installPWA() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log('PWA install outcome:', outcome);
+    deferredPrompt = null;
+    
+    // Remove install button
+    document.querySelector('.fixed.top-4.right-4')?.remove();
+  }
+}
+
+// Track installation
+window.addEventListener('appinstalled', () => {
+  console.log('📱 PWA installed successfully');
+  deferredPrompt = null;
+});
+</script>
 
 </body></html>
