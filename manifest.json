@@ -2,40 +2,9 @@
   "name": "Ultimate Off-Grid Survival Guide",
   "short_name": "Survival Guide",
   "description": "Complete off-grid survival encyclopedia with 60+ scenarios, calculators, and emergency protocols",
+  "version": "1.0.0",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
-  "orientation": "portrait-primary",
-  "theme_color": "#5D5CDE",
-  "background_color": "#FFFFFF",
-  "categories": ["education", "lifestyle", "utilities"],
-  "icons": [
-    {
-      "src": "https://via.placeholder.com/192x192/5D5CDE/FFFFFF?text=🏔️",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://via.placeholder.com/512x512/5D5CDE/FFFFFF?text=🏔️",
-      "sizes": "512x512",
-      "type": "image/png", 
-      "purpose": "any"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Emergency Protocols",
-      "short_name": "Emergency",
-      "description": "Quick access to emergency procedures",
-      "url": "./?emergency=true",
-      "icons": [
-       {
-  "name": "Ultimate Off-Grid Survival Guide",
-  "short_name": "Survival Guide",
-  "description": "Complete off-grid survival encyclopedia with 60+ scenarios, calculators, and emergency protocols",
-  "start_url": "./",
-  "scope": "./", 
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#5D5CDE",
@@ -49,19 +18,42 @@
       "purpose": "any"
     },
     {
-      "src": "./assets/icons/icon-512x512.png", 
+      "src": "./assets/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
       "src": "./assets/icons/icon-512x512.png",
-      "sizes": "512x512", 
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
-}
+  ],
+  "shortcuts": [
+    {
+      "name": "Emergency Protocols",
+      "short_name": "Emergency",
+      "description": "Quick access to emergency procedures",
+      "url": "./?emergency=true",
+      "icons": [
+        {
+          "src": "./assets/icons/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Survival Calculators",
+      "short_name": "Calculators",
+      "description": "Water, food, energy, and firewood calculators",
+      "url": "./?tools=true",
+      "icons": [
+        {
+          "src": "./assets/icons/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     }
