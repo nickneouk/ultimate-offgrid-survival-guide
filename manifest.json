@@ -3,6 +3,7 @@
   "short_name": "Survival Guide",
   "description": "Complete off-grid survival encyclopedia with 60+ scenarios, calculators, and emergency protocols",
   "version": "1.0.0",
+  "id": "com.survival.offgridguide",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -10,6 +11,7 @@
   "theme_color": "#5D5CDE",
   "background_color": "#FFFFFF",
   "categories": ["education", "lifestyle", "utilities"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "./assets/icons/icon-192x192.png",
@@ -19,7 +21,7 @@
     },
     {
       "src": "./assets/icons/icon-512x512.png",
-      "sizes": "512x512",
+      "sizes": "512x512", 
       "type": "image/png",
       "purpose": "any"
     },
@@ -28,6 +30,22 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/390x844/5D5CDE/FFFFFF?text=Emergency+Dashboard",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Emergency protocols dashboard"
+    },
+    {
+      "src": "https://via.placeholder.com/390x844/059669/FFFFFF?text=Survival+Calculators",
+      "sizes": "390x844", 
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Interactive planning calculators"
     }
   ],
   "shortcuts": [
