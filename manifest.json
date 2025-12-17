@@ -12,19 +12,19 @@
   "categories": ["education", "lifestyle", "utilities"],
   "icons": [
     {
-      "src": "./assets/icons/icon-192x192.png",
+      "src": "https://via.placeholder.com/192x192/5D5CDE/FFFFFF?text=🏔️",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./assets/icons/icon-512x512.png",
+      "src": "https://via.placeholder.com/512x512/5D5CDE/FFFFFF?text=🏔️",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./assets/icons/icon-512x512.png",
+      "src": "https://via.placeholder.com/512x512/5D5CDE/FFFFFF?text=🏔️",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -34,25 +34,12 @@
     {
       "name": "Emergency Protocols",
       "short_name": "Emergency",
-      "description": "Quick access to emergency procedures",
+      "description": "Quick access to emergency procedures", 
       "url": "./?emergency=true",
       "icons": [
         {
-          "src": "./assets/icons/icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Survival Calculators",
-      "short_name": "Calculators",
-      "description": "Water, food, energy, and firewood calculators",
-      "url": "./?tools=true",
-      "icons": [
-        {
-          "src": "./assets/icons/icon-192x192.png",
-          "sizes": "192x192",
+          "src": "https://via.placeholder.com/96x96/DC2626/FFFFFF?text=🚨",
+          "sizes": "96x96",
           "type": "image/png"
         }
       ]
