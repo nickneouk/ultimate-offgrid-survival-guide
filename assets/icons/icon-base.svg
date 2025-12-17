@@ -1,0 +1,59 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D5CDE;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4A4BC9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B73FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#1A202C;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#2D3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="compassGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#F7FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EDF2F7;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradient)" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Mountain Silhouette -->
+  <polygon points="50,450 150,280 220,350 256,200 292,350 362,280 462,450 50,450" 
+           fill="url(#mountainGradient)" opacity="0.9"/>
+  
+  <!-- Compass Background -->
+  <circle cx="256" cy="200" r="80" fill="url(#compassGradient)" 
+          stroke="#2D3748" stroke-width="6" opacity="0.95"/>
+  
+  <!-- Compass Needle (North - Red) -->
+  <polygon points="256,140 266,195 256,200 246,195" fill="#DC2626"/>
+  
+  <!-- Compass Needle (South - White) -->
+  <polygon points="256,260 246,205 256,200 266,205" fill="#FFFFFF"/>
+  
+  <!-- Compass Center -->
+  <circle cx="256" cy="200" r="15" fill="#1A202C" stroke="#FFFFFF" stroke-width="3"/>
+  
+  <!-- Direction Markers -->
+  <text x="256" y="125" text-anchor="middle" fill="#1A202C" 
+        font-family="Arial, sans-serif" font-size="28" font-weight="bold">N</text>
+  <text x="316" y="210" text-anchor="middle" fill="#1A202C" 
+        font-family="Arial, sans-serif" font-size="20" font-weight="bold">E</text>
+  <text x="256" y="290" text-anchor="middle" fill="#1A202C" 
+        font-family="Arial, sans-serif" font-size="20" font-weight="bold">S</text>
+  <text x="196" y="210" text-anchor="middle" fill="#1A202C" 
+        font-family="Arial, sans-serif" font-size="20" font-weight="bold">W</text>
+  
+  <!-- Survival Elements -->
+  <circle cx="180" cy="350" r="8" fill="#059669" opacity="0.8"/>
+  <circle cx="200" cy="370" r="6" fill="#059669" opacity="0.8"/>
+  <circle cx="160" cy="365" r="5" fill="#059669" opacity="0.8"/>
+  
+  <circle cx="332" cy="350" r="8" fill="#059669" opacity="0.8"/>
+  <circle cx="312" cy="370" r="6" fill="#059669" opacity="0.8"/>
+  <circle cx="352" cy="365" r="5" fill="#059669" opacity="0.8"/>
+</svg>
